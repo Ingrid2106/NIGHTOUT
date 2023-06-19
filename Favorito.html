@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="stylesheet" href="favorito.css">
+   <script defer src="https://app.embed.im/snow.js"></script>
+    <title>Canciones favoritas</title>
+</head>
+<body>
+    <h1>Canciones favoritas</h1>
+    <table id="tablaCanciones">
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Artista</th>
+                <th>Reproductor de Audio</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+   <script>
+       
+    // Obtener las canciones favoritas almacenadas localmente
+        const cancionesFavoritas = JSON.parse(localStorage.getItem('cancionesFavoritas')) || [];
+        const tablaCanciones = document.getElementById('tablaCanciones');
+
+        // Generar filas de la tabla con las canciones favoritas
+        cancionesFavoritas.forEach(function(cancion) {
+            const fila = document.createElement('tr');
+
+            const celdaTitulo = document.createElement('td');
+            celdaTitulo.textContent = cancion['titulo'];
+            fila.appendChild(celdaTitulo);
+
+            const celdaArtista = document.createElement('td');
+            celdaArtista.textContent = cancion.artista;
+            fila.appendChild(celdaArtista);
+            
+            const celdaAudio = document.createElement('td');
+            const audio = document.createElement('audio');
+            audio.src = cancion['audio'];
+            audio.controls = true;
+            celdaAudio.appendChild(audio);
+            fila.appendChild(celdaAudio);
+
+            tablaCanciones.querySelector('tbody').appendChild(fila);
+        });
+
+ var Cancion = document.getElementById('Cancion');
+
+  function reproducir() {
+    Cancion.play();
+  }
+
+  function pausar() {
+    Cancion.pause();
+  }
+
+  function detener() {
+    Cancion.currentTime = 0;
+    Cancion.pause();
+  }
+     
+    </script>
+</body>
+</html>
+ 
+
+
+const celdaArtista = document.createElement('td');
+            celdaArtista.textContent = cancion.artista;
+            fila.appendChild(celdaArtista);

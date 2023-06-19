@@ -1,0 +1,12 @@
+Bachata 
+Banda
+K-pop
+phonk
+Regeton
+Rock
+Salsa
+Trap
+
+
+Codigo javascript a php
+https://www.programasprogramacion.com/convertir_html2php.php

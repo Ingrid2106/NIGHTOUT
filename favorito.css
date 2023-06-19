@@ -1,0 +1,34 @@
+body{
+  background: #74ebd5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+  /* Estilos generales de la tabla */
+  #tablaCanciones {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  #tablaCanciones th,
+  #tablaCanciones td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+
+  /* Estilos para las celdas de imagen */
+  #tablaCanciones td.celda-imagen img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  /* Estilos para las celdas de reproductor de audio */
+  #tablaCanciones td.celda-audio audio {
+    width: 100%;
+  }
+
+
+
